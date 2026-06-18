@@ -1,0 +1,234 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-family: Brush Script MT, Brush Script Std, cursive; */
+    /* font-family: Snell Roundhand, cursive; */
+}
+body{
+    /* mode sombre */
+    transition: all 0.3s ease-in 0s;
+    background:#f4f6f9;
+}
+/* uniqument mon entete*/
+header{
+    animation: devid 2s;
+    margin-left: 63px;
+    margin-top: 23px;
+    opacity: 0.6;
+    width: 90%; 
+    position: fixed;
+    background:black;
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+header h1{
+    color: blue;
+    font-family: cursive;
+    span{
+        color:red;
+    }
+}
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+nav a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+
+}
+nav a:hover{
+    color: white;
+    font-size: 23px;
+    content: "";
+}
+/* voiture de reves et boutton */
+.hero{
+    background: url(../images/1a.PNG) center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.hero h2 {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-weight: normal;
+    font-size: 87px;
+    border-radius: 14px;
+    padding: 20px;
+    color: white;
+}
+/* les options avant les voitures */
+.recherche{
+    background: white;
+    padding: 20px;
+    margin: -40px auto 30px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 10px;
+}
+.recherche input,.recherche select{
+    padding: 10px;
+    width: 100%;
+    border-radius: 14px;
+    border-color: blue;
+}
+.recherche button{
+    background:blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+/* voitures */
+.voiture{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 14px;
+    overflow-x: scroll;
+    /* text-align: center; */
+}
+.photovoiture{
+    background: white;
+    box-shadow: 5px 6px 14px black;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    text-align: center;
+    animation: corneille 6s alternate;
+}
+.photovoiture:hover{
+    transform: scale(1.05);
+}
+.photovoiture img{
+    width: 100%;
+}
+.info{
+    padding: 15px;
+    text-align: center;
+}
+.prix{
+    color:blue;
+    font-weight: bold;
+}
+/* reseaux sociaux */
+.reseaux{
+    text-align: center;
+    cursor: pointer;
+    color: #4facfe;
+    width: 23;
+}
+/* avant les services */
+   .h1 ,.h2{
+    font-family:Brush Script MT, Brush Script Std, cursive;
+    font-size: 53px;
+   }
+
+/* mode sombre */
+body::selection{
+    background-color:#030315;
+    color: #fff;
+}
+button{
+    background: transparent;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    padding: 1em;
+}
+header nav{
+    display: flex;
+    gap: 19px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* peid de page */
+footer{
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+svg{
+    color: blue;
+}
+/*RESPONSIVITER*/
+@media(max-width:984px){
+    
+.hero h2 {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-weight: normal;
+    font-size: 37px;
+    color: white;
+}
+img{
+    width: 10%;
+}
+.car-info{
+    font-size: 22px;
+}
+.voiture{
+    display: inline;
+    width: 20%;
+}
+header{
+    width: 96%;
+    margin-left: 6px;
+}
+
+.photovoiture{
+    margin: 13px;
+    width: 80%;
+    height: 20%;
+    background: rgb(245, 242, 242);
+    box-shadow: 5px 6px 14px black;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    margin-left: 35px;
+
+}
+.photovoiture img{
+    width: 100%;
+    height:50%;
+}
+body{
+    font-size: 13px;
+}
+h1 , nav{
+    margin-left: -29px;
+}
+}
+/* mes animations sur mon entete */
+@keyframes devid {
+    20%{
+        translate:0px -100px;
+    }
+}
+/* mes animations sur les photos de voiture */
+@keyframes corneille {
+    10%{
+        translate: 0 100px;
+    }
+    30%{
+         scale: 1;
+    }
+}

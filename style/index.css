@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'poppins',sans-serif;
+    font-weight: normal;
+}
+body{
+    background-color:white;
+    position: relative;
+}
+/*l'entete maintenant*/
+span{
+    color:blue;
+    font-family:Brush Script MT, Brush Script Std, cursive;
+    font-size:100px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    height: 80px;
+}
+header .logo{
+    color: red;
+    font-family: cursive;
+}
+header .menu{
+    display: flex;
+    align-items: center;
+}
+header .menu li{
+    list-style: none;
+    margin:  0 15px;
+}
+header .menu li a{
+    color: black;
+    text-decoration: 0;
+    font-size: 15px;
+    position: relative;
+    transition: 0.5s;
+}
+header .menu li a:hover{
+    color: black;
+    font-size: 18px;
+}
+header .menu li a::before{
+    position: absolute;
+    bottom: -5px;
+    content:"";
+    width: 10%;
+    justify-content: center;
+    height: 3px;
+    border-radius: 6px;
+    transition: 0.5s;
+    background-color: blue;
+}
+header .menu li a:hover::before{
+    width: 100%;
+}
+/*fin de l'entete*/
+/* debut du corps cote gauche */
+
+section{
+    height: calc(100vh - 80px);
+    align-items: center;
+    padding:0 10%;
+    display: flex;
+}
+.left{
+    width: 45%;
+    /* background-color: red; */
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    border: 2px solid blue;
+    width: 250px;
+    padding:5px 10px;
+    border-radius: 60px;
+}
+.search-box svg{
+    color:blue;
+    width: 16px;
+}
+.search-box input{
+    background: transparent;
+    color:black;
+    width: calc(100% - 16px);
+    padding-left: 5px;
+    border: 0;
+    outline: 0;
+}
+.left hr{
+    width: 100px;
+    margin: 20px 0;
+    border: 0;
+    height: 5px;
+    border-radius: 6px;
+    background-color: blue;
+}
+.left h1{
+    font-size: 30px;
+    color:black;
+}
+.left p{
+    color: black;
+    font-size: 15px;
+    margin: 15px 0;
+}
+/* les reseaux */
+.icons{
+    animation: corneille 20s;
+    margin-left: -25px;
+    list-style: none;
+    display: flex;
+}
+.icons li{
+    margin: 15px 0;
+}
+.icons li i{
+    color: red;
+    font-size: 20px;
+    border: 2px solid blue;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.icons li i:hover{
+    background-color: blue;
+    color: white;
+    transform: scale(1.5);
+}
+/* fin de la partie gauche */
+
+/* partie droite */
+.right{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.right img{
+    height: 100%;
+    width: 100%;
+}
+button{
+    border: 0;
+    background: transparent;
+}
+/* fin de la page mm */
+
+/* gerons le responsive */
+@media (max-width:904px){
+    header{
+        padding: 0 5%;
+    }
+    header .menu{
+        display: none;
+    }
+    section{
+        margin-top: 100px;
+        flex-direction: column;
+    }
+    section .left , section .right{
+        width: 100%;
+    } 
+    .toggle-menu{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index:1;
+    }
+    .toggle-menu::before{
+        position: absolute;
+        content: "";
+        background-color: black;
+        height: 5px;
+        width: 25px;
+        border-radius: 6px;
+        box-shadow: 0 10px 0 black;
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
+    
+    .toggle-menu::after{
+        position: absolute;
+        content: "";
+        background-color:black;
+        height: 5px;
+        width: 25px;
+        border-radius: 6px;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    .toggle-menu.active::before{
+        transform:translateY(0) rotate(-45deg);
+        box-shadow: 0 0px 0 black;
+    }
+    
+    .toggle-menu.active::after{
+        transform:translateY(0) rotate(45deg);
+    }
+    header .menu.responsive{
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color:white;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    header .menu.responsive li{
+        margin: 25px 0;
+    }
+}
+/* fin de la responsiviter */
+/* animation de mon index.html */
+@keyframes corneille {
+    9%{
+        rotate: 45deg;
+        scale: 2;
+        translate: 50px -100px;
+    }
+    50%{
+        rotate: 180deg;
+        scale: 1;
+        translate: 2px;
+    }
+    100%{
+        rotate: 360deg;
+        scale: 1;
+    }
+}

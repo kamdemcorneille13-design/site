@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* grand conteneur */
+.container{
+    width: 450px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px rgba(0,0,0,0.15);
+}
+h2{
+    text-align: center;
+    color: blue;
+    margin-bottom: 20px;
+}
+.car_info{
+    background:#eef4ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.car_info h3{
+    color: #333;
+}
+.price{
+    color: #16a34a;
+    font-size: 20px;
+    font-weight: bold;
+}
+label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input,select{
+    width: 100%;
+    padding: 12px;
+    border:  1px solid #ccc;
+    border-radius: 8px;
+}
+button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: 0;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: #1d4ed8;
+}
+.summary{
+    margin-top: 15px;
+    padding:12px;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+.success{
+    color: green;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: normal;
+}

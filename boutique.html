@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/boutique.css">
+</head>
+<body>
+     <!-- uniquement mon entete -->
+    <header>
+      <h1>Auto<span>Market</span></h1>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="#voiture">Voiture</a>
+        <a href="payement.html">payement</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <h2>Trouvez la voiture la voiture de vos reves</h2>
+    </section>
+    <div class="recherche">
+      <input type="search" placeholder="marque(BMW,Toyota)" />
+      <select>
+        <option>Prix max</option>
+        <option>5000$</option>
+        <option>10 000$</option>
+        <option>20 000$</option>
+      </select>
+        <button onclick="recherche();">Rechercher</button>
+    </div>
+    <!-- voiture  -->
+    <section class="voiture" id="voiture">
+      <div class="photovoiture">
+        <a href="images/2.png">
+          <img src="images/2.png" width="250" height="250" />
+        </a>
+        <div class="info">
+          <h3>Toyota Corrolla</h3>
+          <p>2018 Essence 50 000km</p>
+          <p class="prix">9 500$</p>
+        </div>
+      </div>
+      <div class="photovoiture">
+        <a href="images/3.png">
+          <img src="images/3.png" width="250" height="250" />
+        </a>
+        <div class="car-info">
+          <h3>BMW</h3>
+          <p>2021 Diesel 30 000km</p>
+          <p class="prix">18 000$</p>
+        </div>
+      </div>
+      <div class="photovoiture">
+        <a href="images/4.png">
+          <img src="images/4.png" width="250" height="250" />
+        </a>
+        <div class="car-info">
+          <h3>Mercedes C-Class</h3>
+          <p id="mode">2019 Essence 40 000km</p>
+          <p class="prix">22 000$</p>
+        </div>
+      </div>
+      <div class="photovoiture">
+        <a href="images/5.png">
+          <img src="images/5.png" width="250" height="250" />
+        </a>
+        <div class="car-info">
+          <h3>Ford</h3>
+          <p>2024 Diesel 55 000km</p>
+          <p class="prix">23 000$</p>
+        </div>
+      </div>
+    </section>
+    <!-- services pour notre site de voiture -->
+   
+    <!-- quelques reseaux sociaux -->
+    <section class="reseaux">
+        <svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 512 512"width="23" onclick="facebook();">
+          <path fill="currentColor"d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"width="23" onclick=" instagram();">
+          <path fill="currentColor"d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 512 512" width="23" onclick="telegram();">
+          <path fill="currentColor"d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496zM371 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2 .5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3 .6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7 .5 3.2 .6 6.5 .4 9.8z"/>
+          </svg>
+        <svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 448 512"width="23" onclick="twitwer();" ><path fill="currentColor"d="M357.2 48L427.8 48 273.6 224.2 455 464 313 464 201.7 318.6 74.5 464 3.8 464 168.7 275.5-5.2 48 140.4 48 240.9 180.9 357.2 48zM332.4 421.8l39.1 0-252.4-333.8-42 0 255.3 333.8z"/></svg>
+    </section>
+    <!-- pied de page -->
+    <footer>
+      <p>&copy; 2026 AutoMarquet - Tous droits reserves</p>
+    </footer>
+    <script src="js/boutique.js"></script>
+</body>
+</html>

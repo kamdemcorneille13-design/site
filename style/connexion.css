@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   min-height: 100vh;
+}
+h2{
+    font-size: 40px;
+}
+section{
+    overflow: hidden;
+    justify-content: center;
+    background-color: white;
+    color:black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 13px black;
+}
+/*les indices*/
+.indice{
+    margin-left: -322px;
+}
+div{
+    justify-content: center;
+  
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+input{
+    padding: 7px;
+    display: block;
+    width: 150%;
+    border-radius: 10px;
+    border-color:#4facfe;
+} 
+button{
+    color: white;
+    font-size: 12px;
+    width: 154%;
+    padding: 9px;
+    border-radius: 12px;
+    background: blue;
+    font-size: 19px;
+}
+h3{
+    margin: 20px;
+}
+span{
+    color: blue;
+    cursor: pointer;
+}
+span:hover{
+    text-decoration: underline;
+}
+/* resposiviter*/
+@media (max-width:984px) {
+    section{
+        width: 90%;
+    }
+    input{
+        width: 90%;
+    }
+    .indice{
+        margin-left: -153px;
+    }
+    button{
+        width: 90%;
+    }
+}
